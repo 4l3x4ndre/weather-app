@@ -1,0 +1,21 @@
+node_modules/**/*
+.expo/*
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+web-report/
+config.js
+package-lock.json
+MaMeteo_upload_cert.pem
+*.xcf
+
+#dev
+assets/city.list.json
+
+# macOS
+.DS_Store
