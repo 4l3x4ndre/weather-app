@@ -5,7 +5,7 @@ const primeColor = '#2763a0' //A2273C
 export default{
     color: primeColor,
     container: {
-        margin: 10,
+        margin: 30,
         flex: 1,
     },
     title: {

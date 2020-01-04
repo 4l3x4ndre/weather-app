@@ -7,6 +7,7 @@ import 'moment/locale/fr'
 moment.locale('fr')
 
 import FadeInView from '../animations/fadeInView'
+import Images from './Images'
 
 export default class Row extends React.Component {
 
@@ -47,24 +48,10 @@ export default class Row extends React.Component {
     }
 
     icon (size = 50) {
-        const type = this.props.day.weather[0].main.toLowerCase()
         
-        let image
-        switch (type) {
-            case 'clouds':
-                image = require('./icons/clouds.png')
-                break
-            case 'rain':
-                image = require('./icons/rain.png')
-                break
-            default:
-                let h = moment(this.props.day.dt*1000).format('H') 
-                if (h < 19 && h > 6) {
-                    image = require('./icons/sun.png')
-                } else {
-                    image = require('./icons/moon.png')
-                }
-        }
+        let img = this.props.day.weather[0].icon
+        let image = Images[img.toString()]
+        
         return (
             <Image source={image} style={{width: size, height: size}}/>
         )
